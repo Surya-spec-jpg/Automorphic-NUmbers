@@ -1,4 +1,4 @@
-//Print the 3rd positioned Automorphic number within the range
+//Print the Automorphic numbers within the range
 import java.util.Scanner;
 public class Automorphic {
     public static void main(String[] args) {
@@ -6,7 +6,6 @@ public class Automorphic {
         System.out.print("Enter the limit :");
         int u = sc.nextInt();
         int l = sc.nextInt();
-        int loc=0;
         for (int i = u; i <= l; i++) {
             int n = i;
             long sq = (long) n * n;
@@ -18,10 +17,7 @@ public class Automorphic {
             }
             long value = sq % (long) Math.pow(10, count);
             if (value == dup) {
-                loc++;
-                if(loc%3==0) {
-                    System.out.println(dup);
-                }
+                System.out.println(dup);
             }
         }
     }
